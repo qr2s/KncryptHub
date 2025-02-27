@@ -10,11 +10,11 @@ ESP.DeletedFunction = {};
 
 function ESP:GetSize(Instance : Model & BasePart) : UDim2
 	if Instance:IsA('BasePart') then
-		return UDim2.new(Instance.Size.X,10,Instance.Size.Y,10);
+		return UDim2.new(Instance.Size.X + 10,10,Instance.Size.Y + 10,10);
 	elseif Instance:IsA('Model') then
 		local world = Instance:GetModelSize();
 		
-		return UDim2.new(world.X,10,world.Y,10);
+		return UDim2.new(world.X + 10,10,world.Y + 10,10);
 	end;
 end;
 
